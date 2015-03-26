@@ -45,7 +45,7 @@ e.g.
 
 1. Upload `hulvire-aktuality` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php code(); [huu_aktuality] ?>` in your pages
+1. Place `[huu_aktuality]` in your pages
 
 == Frequently Asked Questions ==
 
