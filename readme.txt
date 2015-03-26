@@ -4,7 +4,7 @@ Donate link: http://amfajnor.sk/
 Tags: news, custom posts
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,20 +67,26 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
+= 1.3 =
+* Last proper working version. 
+* Settings for number of visible posts.
+
+= 1.2 =
+
 = 1.1 =
-* A change since the previous version.
-* Another change.
 
 = 1.0 =
-* List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
 
+= 1.3 =
+Last proper working version.
+
 = 1.1 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
+Upgrade some bugs and functionality.
 
 = 1.0 =
-This version fixes a security related bug.  Upgrade immediately.
+Very first version.
 
 == Arbitrary section ==
 

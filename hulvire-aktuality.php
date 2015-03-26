@@ -3,7 +3,7 @@
 Plugin Name: Hulvire aktuality
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
 Description: 
-Version: 1.3
+Version: 1.3.1
 Author: Fajnor
 Author URI: http://amfajnor.sk
 License: GPL2
@@ -38,7 +38,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 			
 			
 			
-			define( 'HUU_VERSION', '1.3.0' );
+			define( 'HUU_VERSION', '1.3.1' );
 			define( 'HUU__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			define( 'HUU__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
