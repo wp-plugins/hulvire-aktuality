@@ -45,7 +45,7 @@ e.g.
 
 1. Upload `hulvire-aktuality` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php[huu_aktuality] ?>` in your templates
+1. Place `<?php [huu_aktuality] ?>` in your templates
 
 == Frequently Asked Questions ==
 
@@ -69,7 +69,7 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 1.3 =
 * Last proper working version. 
-* Settings for number of visible posts.
+* Add settings for number of visible posts.
 
 = 1.2 =
 
