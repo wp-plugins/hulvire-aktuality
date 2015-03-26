@@ -120,7 +120,7 @@ add_action("manage_hulvire_aktuality_posts_custom_column", "huu_custom_columns")
 		<table style="width:100%;">			
         	<tr>
 				<td style="width:25%;">
-					<label for="aktualita_before_text"><strong><?php _e('Before text','HuuA');?></strong></label>					
+					<label for="aktualita_before_text"><strong><?php _e('Displayed text','HuuA');?></strong></label>					
 				</td>
 				<td style="width:75%;">
 					<textarea type="text" name="aktualita_before_text" id="aktualita_before_text" value="" style="width:60%; margin-right:4%;" ><?php echo $aktualita_before_text; ?></textarea>
@@ -129,7 +129,7 @@ add_action("manage_hulvire_aktuality_posts_custom_column", "huu_custom_columns")
 			</tr>
         	<tr>
 				<td style="width:25%;">
-					<label for="aktualita_after_text"><strong><?php _e('After text','HuuA');?></strong></label>					
+					<label for="aktualita_after_text"><strong><?php _e('Text displayed when you press read more','HuuA');?></strong></label>					
 				</td>
 				<td style="width:75%;">
 					<textarea type="text" name="aktualita_after_text" id="aktualita_after_text" value="" style="width:60%; margin-right:4%;" ><?php echo $aktualita_after_text; ?></textarea>
