@@ -69,13 +69,15 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 1.3 =
 * Last proper working version. 
-* Add settings for number of visible posts.
+* Added settings - number of visible posts.
 
 = 1.2 =
+* Upgraded some bugs and functionality.
 
 = 1.1 =
 
 = 1.0 =
+* Very first version.
 
 == Upgrade Notice ==
 
