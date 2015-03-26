@@ -12,7 +12,7 @@ Plugin to show simple news.
 
 == Description ==
 
-plugin for displaying messages, news on wordpress site
+plugin for displaying messages or news with simple picture gallery on wordpress sites
 Simple text entry and thumbnail pictures option to add multiple images
 
 

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hulvire aktuality
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
-Description: 
+Description: plugin for displaying messages or news with simple picture gallery on wordpress sites
 Version: 1.3.2
 Author: Fajnor
 Author URI: http://amfajnor.sk
