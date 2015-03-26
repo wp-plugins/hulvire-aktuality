@@ -12,8 +12,8 @@ Plugin to show simple news.
 
 == Description ==
 
-plugin for displaying messages or news with simple picture gallery on wordpress sites
-Simple text entry and thumbnail pictures option to add multiple images
+Plugin for displaying messages or news with simple picture gallery on wordpress sites. 
+Simple text entry and thumbnail pictures, option to add multiple images.
 
 
 == Installation ==
@@ -24,13 +24,9 @@ Simple text entry and thumbnail pictures option to add multiple images
 `[huu_aktuality]`
 
 This plugin needs for proper function Meta Box plugin installed.
+Optional is WP Lightbox 2 or any.
 
 
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
 
 
 
