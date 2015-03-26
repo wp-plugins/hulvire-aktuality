@@ -45,7 +45,7 @@ e.g.
 
 1. Upload `hulvire-aktuality` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php [huu_aktuality] ?>` in your templates
+1. Place `[huu_aktuality]` in your pages
 
 == Frequently Asked Questions ==
 
@@ -53,9 +53,7 @@ e.g.
 
 An answer to that question.
 
-= What about foo bar? =
 
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
@@ -69,15 +67,16 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 1.3 =
 * Last proper working version. 
-* Added settings - number of visible posts.
+* Added setting - number of visible posts.
 
 = 1.2 =
-* Upgraded some bugs and functionality.
+* Fixes some bugs and functionality
 
 = 1.1 =
+* Fixes some bugs and functionality
 
 = 1.0 =
-* Very first version.
+* The very first version - the basic construct of the plugin
 
 == Upgrade Notice ==
 
@@ -85,10 +84,10 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 Last proper working version.
 
 = 1.1 =
-Upgrade some bugs and functionality.
+Fixes some bugs and functionality
 
 = 1.0 =
-Very first version.
+The very first version - the basic construct of the plugin
 
 == Arbitrary section ==
 
