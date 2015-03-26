@@ -3,7 +3,7 @@
 Plugin Name: Hulvire aktuality
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
 Description: 
-Version: 1.3.1
+Version: 1.3.2
 Author: Fajnor
 Author URI: http://amfajnor.sk
 License: GPL2
@@ -38,7 +38,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 			
 			
 			
-			define( 'HUU_VERSION', '1.3.1' );
+			define( 'HUU_VERSION', '1.3.2' );
 			define( 'HUU__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			define( 'HUU__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -72,14 +72,22 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 
 			function huu_get_aktuality(){
 				
-				$aktuality = '<div align="center">';
+				$current_color = get_option('setting_current_color') ?: "#9BC008";
+				$img_border_thick = get_option('setting_img_border_thick') ?: "2px";
+				$show_more_text = get_option('setting_show_more_text') ?: "Zobraz viac";
+				$show_less_text = get_option('setting_show_less_text') ?: "Zobraz menej";
+				$color_viacmenej = get_option('setting_color_viacmenej') ?: "Blue";
+				$color_text_p = get_option('setting_color_text_p') ?: "#333";
+				
+				
+				$aktuality = '<style>.aktuality .item img,.aktuality .item .image { border:'.$img_border_thick.' solid '.$current_color.'} .textRight a { color:'.$color_viacmenej.' } .aktuality p { color:'.$color_text_p.' }</style>';
+				$aktuality.= '<div align="center" style="color:'.$current_color.'">';
 				$aktuality.= '<div class="aktuality">';
  
 				    $huu_query = "post_type=hulvire_aktuality";
 				    query_posts($huu_query);
      			   
-					$kolko = get_option('setting_a');
-					if($kolko == "") $kolko = 3;
+					$kolko = get_option('setting_kolko') ?: 3;
 					$kolky = 1;
 					
 				    if (have_posts()) : while (have_posts()) : the_post();
@@ -135,7 +143,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 								$aktuality.='</div><!--/div aftermore-->';
 								
 								$javascriptCall = "javascript:toggleDiv('aftermore".$idecko."','toggler".$idecko."',".$idecko.");";
-								$aktuality.='<p class="textRight"><a href="'.$javascriptCall.'" id="toggler'.$idecko.'">Zobraz viac</a></p>';
+								$aktuality.='<p class="textRight"><a href="'.$javascriptCall.'" id="toggler'.$idecko.'" title="'.$show_more_text.' | '.$show_less_text.'">'.$show_more_text.'</a></p>';
 
 								$aktuality.='</div><!--/div itemContent-->';
 								$aktuality.='</div><!--/div item-->';
@@ -187,7 +195,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 								$aktuality.='</div><!--/div aftermore-->';
 								
 								$javascriptCall = "javascript:toggleDiv('aftermore".$idecko."','toggler".$idecko."',".$idecko.");";
-								$aktuality.='<p class="textRight"><a href="'.$javascriptCall.'" id="toggler'.$idecko.'">Zobraz viac</a></p>';
+								$aktuality.='<p class="textRight"><a href="'.$javascriptCall.'" id="toggler'.$idecko.'">'.$show_more_text.'</a></p>';
 
 								$aktuality.='</div><!--/div itemContent-->';
 								$aktuality.='</div><!--/div item-->';

@@ -19,15 +19,19 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
         public function admin_init()
         {
         	// register your plugin's settings
-        	register_setting('wp_hulvire_aktuality-group', 'setting_a');
-        	//register_setting('wp_hulvire_aktuality-group', 'setting_b');
-        	//register_setting('wp_hulvire_aktuality-group', 'setting_animacia');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_kolko');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_current_color');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_img_border_thick');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_show_more_text');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_show_less_text');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_color_viacmenej');
+        	register_setting('wp_hulvire_aktuality-group', 'setting_color_text_p');
         	//register_setting('wp_hulvire_aktuality-group', 'setting_checkbox');
 
         	// add your settings section
         	add_settings_section(
         	    'wp_hulvire_aktuality-section', 
-        	    'Hulvire Aktuality Settings', 
+        	    'Settings', 
         	    array(&$this, 'settings_section_hulvire_aktuality'), 
         	    'wp_hulvire_aktuality'
         	);
@@ -35,26 +39,62 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
         	// add your setting's fields
 			
             add_settings_field(
-                'wp_hulvire_aktuality-setting_a', 
+                'wp_hulvire_aktuality-setting_kolko', 
                 'pocet zobrazovanych aktualit', 
-                array(&$this, 'settings_field_input_text'), 
-                'wp_hulvire_aktuality', 
-                'wp_hulvire_aktuality-section',
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
                 array(
-                    'field' => 'setting_a'
+                    'field' => 'setting_kolko'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_current_color', 
+                'current color', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_current_color'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_img_border_thick', 
+                'image border thickness', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_img_border_thick'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_show_more_text', 
+                'show more text', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_show_more_text'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_show_less_text', 
+                'show less text', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_show_less_text'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_color_viacmenej', 
+                'color show more/less', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_color_viacmenej'
+                )
+            );
+			add_settings_field(
+                'wp_hulvire_aktuality-setting_color_text_p', 
+                'text color', 
+                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(
+                    'field' => 'setting_color_text_p'
                 )
             );
 			/*
-            add_settings_field(
-                'wp_hulvire_aktuality-setting_b', 
-                'Setting B', 
-                array(&$this, 'settings_field_input_text'), 
-                'wp_hulvire_aktuality', 
-                'wp_hulvire_aktuality-section',
-                array(
-                    'field' => 'setting_b'
-                )
-            );
 			add_settings_field(
 			    'wp_hulvire_aktuality-setting_animacia',
 			    'nastav animaciu',
@@ -81,7 +121,7 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
         public function settings_section_hulvire_aktuality()
         {
             // Think of this as help text for the section.
-            echo 'Nastavenia pre Hulvire Aktuality. ٩(●̮̮̃•)۶';
+            echo 'Here you could set count of news to be displayed before you pres show more news. ٩(●̮̮̃•)۶ Môžete nastaviť počet zobrazovaných noviniek pred stlačením zobraziť všetky novinky.';
         }
         
         /**

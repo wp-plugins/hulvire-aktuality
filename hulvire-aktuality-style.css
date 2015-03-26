@@ -2,11 +2,12 @@
 ---------------------------------------------------------------------------------------------------*/
 .aktuality { width: 80%; margin: 0 auto; padding: 5px 0 0 0;text-align: left; }
 .aktuality .item { width: 100%; float: left; margin: 0 0 10px 0; position: relative}
+.aktuality .item a { border:none; }
 .aktuality .item img,
-.aktuality .item .image { width: 20%; height: auto; float: left; margin: 0 13px 20px 0; border:2px solid #9BC008;  }
+.aktuality .item .image { width: 20%; height: auto; float: left; margin: 0 13px 20px 0;  }
 .aktuality .item .itemContent { width: 77%; float: left; }
 .aktuality p { margin: 0;font-size:14px;text-align:justify;color:#fff; }
-.aktuality .item h3 { font-size: 18px;color:#9BC00B;margin:0; }
+.aktuality .item h3 { font-size: 18px;color:currentColor;margin:0; }
 
 .moreImagesHint { border: 1px solid red;}
 
