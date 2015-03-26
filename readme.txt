@@ -8,11 +8,12 @@ Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin to show simple news. This plugin need for proper function Meta Box plugin to be installed.
+Plugin to show simple news. 
 
 == Description ==
 
-This is developer version of my second plugin, please take this into consideration.
+plugin for displaying messages, news on wordpress site
+Simple text entry and thumbnail pictures option to add multiple images
 
 
 == Installation ==
@@ -21,6 +22,8 @@ This is developer version of my second plugin, please take this into considerati
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place in your pages
 `[huu_aktuality]`
+
+This plugin needs for proper function Meta Box plugin installed.
 
 
 == Frequently Asked Questions ==
