@@ -49,7 +49,7 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
 			add_settings_field(
                 'wp_hulvire_aktuality-setting_current_color', 
                 'current color', 
-                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(&$this, 'settings_field_input_color_picker'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
                 array(
                     'field' => 'setting_current_color'
                 )
@@ -81,7 +81,7 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
 			add_settings_field(
                 'wp_hulvire_aktuality-setting_color_viacmenej', 
                 'color show more/less', 
-                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(&$this, 'settings_field_input_color_picker'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
                 array(
                     'field' => 'setting_color_viacmenej'
                 )
@@ -89,7 +89,7 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
 			add_settings_field(
                 'wp_hulvire_aktuality-setting_color_text_p', 
                 'text color', 
-                array(&$this, 'settings_field_input_text'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
+                array(&$this, 'settings_field_input_color_picker'),'wp_hulvire_aktuality','wp_hulvire_aktuality-section',
                 array(
                     'field' => 'setting_color_text_p'
                 )
@@ -137,6 +137,16 @@ if(!class_exists('WP_Hulvire_Aktuality_Settings'))
             echo sprintf('<input type="text" name="%s" id="%s" value="%s" />', $field, $field, $value);
         } // END public function settings_field_input_text($args)
         
+        public function settings_field_input_color_picker($args)
+        {
+            // Get the field name from the $args array
+            $field = $args['field'];
+            // Get the value of this setting
+            $value = get_option($field);
+            // echo a proper input type="text"
+            echo sprintf('<input type="text" name="%s" id="%s" value="%s" class="cpa-color-picker" />', $field, $field, $value);
+        } // END public function settings_field_input_text($args)
+		
 		public function settings_field_input_radio($args) {
  
             $field = $args['field'];

@@ -3,7 +3,7 @@
 Plugin Name: Hulvire aktuality
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
 Description: plugin for displaying messages or news with simple picture gallery on wordpress sites
-Version: 1.3.2
+Version: 1.3.3
 Author: Fajnor
 Author URI: http://amfajnor.sk
 License: GPL2
@@ -38,9 +38,23 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 			
 			
 			
-			define( 'HUU_VERSION', '1.3.2' );
+			define( 'HUU_VERSION', '1.3.3' );
 			define( 'HUU__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			define( 'HUU__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+			
+			
+			add_action( 'admin_enqueue_scripts', 'wptuts_add_color_picker' );
+			function wptuts_add_color_picker( $hook ) {
+ 
+			    if( is_admin() ) {
+     
+			        // Add the color picker css file      
+			        wp_enqueue_style( 'wp-color-picker' );
+         
+			        // Include our custom jQuery file with WordPress Color Picker dependency
+			        wp_enqueue_script( 'custom-script-handle', plugins_url( 'hulvire-aktuality-admin-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+			    }
+			}
 
 			function huu_scripts_method() {
 				wp_enqueue_style('hulvire-aktuality-style_css', HUU__PLUGIN_URL .'hulvire-aktuality-style.css');
