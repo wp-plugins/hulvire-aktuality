@@ -41,9 +41,9 @@ Optional is WP Lightbox 2 or any.
 
 = 1.3.2 =
 * Added more settings
-* set current and main text color
-* set picture border thickness 
-* set more / less text and color
+- set current and main text color
+- set picture border thickness 
+- set more / less text and color
 
 = 1.3 =
 * Added setting - number of visible posts.
