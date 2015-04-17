@@ -27,9 +27,6 @@ This plugin needs for proper function Meta Box plugin installed.
 Optional is WP Lightbox 2 or any.
 
 
-
-
-
 == Screenshots ==
 
 1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
