@@ -1,5 +1,5 @@
 <?php
-function huu_register_init() { 
+function huu_aktuality_register_init() { 
 	
 	$labels = array(
 	'name'                => _x( 'hulvire_aktuality', 'post type general name' ),
@@ -34,12 +34,12 @@ function huu_register_init() {
    
     register_post_type('hulvire_aktuality' , $args ); 
 } 
-add_action('init', 'huu_register_init');
+add_action('init', 'huu_aktuality_register_init');
 add_theme_support('post-thumbnails', array('hulvire_aktuality'));
 
 
 /* Add Custom Columns */
-function huu_edit_columns($columns)
+function huu_aktuality_edit_columns($columns)
 {
 	$columns = array(
 		  "cb" => '<input type="checkbox" >',
@@ -52,11 +52,11 @@ function huu_edit_columns($columns)
 	
 	return $columns;
 }
-add_filter("manage_hulvire_aktuality_posts_columns", "huu_edit_columns");
+add_filter("manage_hulvire_aktuality_posts_columns", "huu_aktuality_edit_columns");
 
 
 
-function huu_custom_columns($column){
+function huu_aktuality_custom_columns($column){
 	global $post;
 	switch ($column)
 	{
@@ -94,7 +94,7 @@ function huu_custom_columns($column){
 			break;
 	}
 }
-add_action("manage_hulvire_aktuality_posts_custom_column", "huu_custom_columns");
+add_action("manage_hulvire_aktuality_posts_custom_column", "huu_aktuality_custom_columns");
 
 
 
@@ -103,10 +103,10 @@ add_action("manage_hulvire_aktuality_posts_custom_column", "huu_custom_columns")
 /*-----------------------------------------------------------------------------------*/	
 
 
-	function huu_add_meta_boxes() {
+	function huu_aktuality_add_meta_boxes() {
 	    add_meta_box('huu_meta_id', 'Aktuality text', 'aktualita_meta_box', 'hulvire_aktuality', 'normal');
 	}
-	add_action('add_meta_boxes', 'huu_add_meta_boxes');
+	add_action('add_meta_boxes', 'huu_aktuality_add_meta_boxes');
 	
 	function aktualita_meta_box( $post )
 	{

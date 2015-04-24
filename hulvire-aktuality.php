@@ -3,7 +3,7 @@
 Plugin Name: Hulvire aktuality
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
 Description: plugin for displaying messages or news with simple picture gallery on wordpress sites
-Version: 1.3.3
+Version: 1.3.4
 Author: Fajnor
 Author URI: http://amfajnor.sk
 License: GPL2
@@ -38,7 +38,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 			
 			
 			
-			define( 'HUU_VERSION', '1.3.3' );
+			define( 'HUU_VERSION', '1.3.4' );
 			define( 'HUU__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			define( 'HUU__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 			
@@ -56,16 +56,16 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 			    }
 			}
 
-			function huu_scripts_method() {
+			function huu_aktuality_scripts_method() {
 				wp_enqueue_style('hulvire-aktuality-style_css', HUU__PLUGIN_URL .'hulvire-aktuality-style.css');
 				wp_enqueue_script('hulvire-aktuality-script', HUU__PLUGIN_URL .'hulvire-aktuality-script.js');
 			}
-			add_action('wp_enqueue_scripts', 'huu_scripts_method');
+			add_action('wp_enqueue_scripts', 'huu_aktuality_scripts_method');
 
 			require_once('post-types/hulvire-aktuality-text-type.php');
 			
 			
-			function huu_script(){
+			function huu_aktuality_script(){
 
 				echo "<script type='text/javascript' charset='utf-8'>
 				(function($) {
@@ -82,7 +82,7 @@ if(!class_exists('WP_Hulvire_Aktuality'))
 				</script>";
  
 			}
-			add_action('wp_head', 'huu_script');
+			add_action('wp_head', 'huu_aktuality_script');
 
 			function huu_get_aktuality(){
 				
